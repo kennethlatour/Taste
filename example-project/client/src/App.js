@@ -1,28 +1,38 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, useHistory } from "react-router-dom";
+import Home from "./home";
+import './App.css';
+import Taste from "./taste";
+import Quiz from "./quiz"
+
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
+  
+  const [currentUser, setCurrentUser] = useState({})
+  const history = useHistory()
+  
+  function handleLogin(user){
+    history.push(`/taste`)
+    setCurrentUser(user)
+   
+  }
 
   return (
-    <BrowserRouter>
+    
       <div className="App">
         <Switch>
-          <Route path="/testing">
-            <h1>Test Route</h1>
+          <Route exact path ="/taste">
+           <Taste currentUser={currentUser}/>
+          </Route>
+          <Route exact path ="/quiz">
+           <Quiz />
           </Route>
           <Route path="/">
-            <h1>Page Count: {count}</h1>
+          <Home handleLogin={handleLogin} />
           </Route>
         </Switch>
       </div>
-    </BrowserRouter>
+   
   );
 }
 
