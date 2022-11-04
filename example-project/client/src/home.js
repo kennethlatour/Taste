@@ -3,7 +3,7 @@ import LoginModal from './LoginModal';
 import SignupModal from './SignupModal';
 import { useHistory } from "react-router-dom";
 import './App.css'
-function Home( { handleLogin } ){
+function Home( { handleLogin , setCurrentUser} ){
     const [show, setShow] = useState(false);
     const [signupShow, setSignupShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -16,13 +16,15 @@ function Home( { handleLogin } ){
         <div className= "overlay" id = "login">
             <div className = "vertical-center">
             <SignupModal
+            
             show={signupShow}
             handleClose={handleSignupClose}
             handleShow={handleSignupShow}
             handleLogin={handleLogin}
             />
             <div className= "vertical-center">
-            <LoginModal 
+            <LoginModal
+            setCurrentUser = {setCurrentUser} 
             show={show}
             handleClose={handleClose}
             handleShow={handleShow}

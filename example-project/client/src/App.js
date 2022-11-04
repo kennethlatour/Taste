@@ -4,9 +4,11 @@ import Home from "./home";
 import './App.css';
 import Taste from "./taste";
 import Quiz from "./quiz"
-
+import Result from "./result"
 
 function App() {
+  const [typeState, setTypeState] = useState ()
+  const [resultStyle, setResultStyle] = useState()
   
   const [currentUser, setCurrentUser] = useState({})
   const history = useHistory()
@@ -16,6 +18,11 @@ function App() {
     setCurrentUser(user)
    
   }
+  useEffect(() => {
+    fetch(`/styles/${typeState}`)
+    .then(res => res.json())
+    .then(data => setResultStyle(data))
+}, [typeState])
 
   return (
     
@@ -25,10 +32,13 @@ function App() {
            <Taste currentUser={currentUser}/>
           </Route>
           <Route exact path ="/quiz">
-           <Quiz />
+           <Quiz setTypeState = {setTypeState}/>
+          </Route>
+          <Route exact path ="/result">
+           <Result resultStyle = {resultStyle} currrentUser = {currentUser} />
           </Route>
           <Route path="/">
-          <Home handleLogin={handleLogin} />
+          <Home handleLogin={handleLogin} setCurrentUser = {setCurrentUser} />
           </Route>
         </Switch>
       </div>

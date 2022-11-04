@@ -1,3 +1,3 @@
 class PainterSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :img, :painter
 end

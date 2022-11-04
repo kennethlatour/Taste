@@ -5,6 +5,7 @@ function Navigation() {
       <div>
         <Link href="/taste">Tastes</Link>
         <Link href="/quiz">quiz</Link>
+        <Link href="/result">quiz</Link>
      </div>
   )
 }
