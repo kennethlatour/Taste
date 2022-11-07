@@ -1,0 +1,40 @@
+.styleImg{
+    position: absolute;
+    left: 20vw;
+    top: 4%;
+    width: 60vw;
+    z-index: -2;
+    height: 85vh;
+}
+.styleName{
+    padding-left: 50%;
+    padding-top: 22%;
+    color:white;
+    z-index: 2;
+    position: absolute;
+}
+
+.styleDescript {
+    color: black;
+    /* padding-top: 20%; */
+    font-family:  'Aboreto', cursive;
+    text-align: center;
+    padding-top: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 325px;
+    font-size: 30%;
+}
+
+.saveButton {
+    font-weight: thin;
+    /* padding-top: 5vh; */
+    /* padding-left: 2%; */
+    /* padding-bottom: 5vh; */
+    font-family:  'Aboreto', cursive;
+    border-width: 0em;
+    border-radius: 0%;
+    font-size: 100%;
+    background-color: rgba(95, 95, 95, 0);
+    color: rgb(0, 13, 255);
+}

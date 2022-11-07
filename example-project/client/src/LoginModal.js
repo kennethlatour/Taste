@@ -35,12 +35,12 @@ function LoginModal({handleShow, show, handleClose, handleLogin, setCurrentUser}
 
 
     return( <>
-        <Button variant="primary" onClick={handleShow}>
+        <Button className = "login" variant="primary" onClick={handleShow}>
           Login
         </Button>
   
         <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
+          <Modal.Header >
             <Modal.Title>Login</Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -67,7 +67,7 @@ function LoginModal({handleShow, show, handleClose, handleLogin, setCurrentUser}
                   autoFocus
                 />
               </Form.Group>
-              <Button variant="primary" type='submit' onClick={handleClose}>
+              <Button className = "logSubmit" variant="primary" type='submit' onClick={handleClose}>
               Login
             </Button>
             </Form>

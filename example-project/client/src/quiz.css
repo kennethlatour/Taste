@@ -1,0 +1,68 @@
+.quizContainer {
+    display: inline;
+}
+
+.img1 {
+    padding-top: 1%;
+    width: 40vw;
+    height: 80vh;
+    content: stretch;
+    padding-right: 50%;
+    margin-right: 50%;
+    position: absolute;
+    left: 10vw; 
+    top:7vh;
+    z-index: 2;
+
+}
+.img2 {
+    width: 40vw;
+    height: 80vh;
+    padding-top: 1%;
+    padding-left: 2%;
+    position: absolute;
+    z-index: 2;
+    top:7vh;
+}
+
+.quizMarquee{
+    font-weight: thin;
+    /* padding-top: 5vh; */
+    /* padding-left: 2%; */
+    /* padding-bottom: 5vh; */
+    font-family:  'Aboreto', cursive;
+    font-size: 118%;
+    z-index: -1;
+
+}
+.inlineDiv{
+    display: flex;
+
+}
+.sideMarquee {
+    font-weight: thin;
+    /* padding-top: 5vh; */
+    /* padding-left: 2%; */
+    /* padding-bottom: 5vh; */
+    font-family:  'Aboreto', cursive;
+    font-size: 118%;
+    z-index: -1;
+    display: flex;
+    width: 10px;
+    
+
+}
+.sideMarquee2 {
+    font-weight: thin;
+    /* padding-top: 5vh; */
+    /* padding-left: 2%; */
+    /* padding-bottom: 5vh; */
+    font-family:  'Aboreto', cursive;
+    font-size: 118%;
+    z-index: -1;
+    display: flex;
+    width: 10px;
+    
+ 
+
+}

@@ -12,7 +12,10 @@ function Home( { handleLogin , setCurrentUser} ){
     const handleSignupClose = () => setSignupShow(false);
 //Will have a signup and login modal
     return (
+        <div className='top'>
         <>
+        <div className='title'> TASTE</div>
+       <img className='top' src = 'https://64.media.tumblr.com/1bb8f47cc7aeab2d541867c251244ebb/tumblr_p67sm2UF8W1trkvxko1_r1_1280.jpg'/>
         <div className= "overlay" id = "login">
             <div className = "vertical-center">
             <SignupModal
@@ -36,6 +39,7 @@ function Home( { handleLogin , setCurrentUser} ){
         </div>
           
         </>
+        </div>
     );
     
 }

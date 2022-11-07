@@ -1,5 +1,7 @@
 import {React, useEffect, useState } from "react";
-import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
+import './result.css';
+import Marquee from "react-fast-marquee";
 
 function Result({resultStyle, currentUser}) {
  
@@ -26,15 +28,19 @@ const history = useHistory()
     })
     .then((res) => res.json())
     .then((res) => {
-        history.push('/tastes');
+        history.push('/taste');
  })
  }
+ const noblur = false
     return (
       <div>
-       <h1> {resultStyle.style}</h1>
-       <img src = {resultStyle.img} />
-       <h2> {resultStyle.descript}</h2>
-       <button onClick = {saveStyle}>Save</button>
+            <Marquee gradient = {noblur} direction = "right"> 
+       <button className= "saveButton" onClick = {saveStyle}>Save Save Save Save Save save save save Save save save save</button>
+       </Marquee>
+       <div className="styleName"> {resultStyle.style}</div>
+       <img  className="styleImg" src = {resultStyle.img} />
+       <div className="styleDescript"> {resultStyle.descript}</div>
+   
      </div>
   )
 }

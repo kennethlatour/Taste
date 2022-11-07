@@ -50,12 +50,12 @@ function SignupModal({handleShow, show, handleClose, handleLogin}){
     
     return(
     <> 
-    <Button variant="primary" onClick={handleShow}>
+    <Button  className = "login" variant="primary" onClick={handleShow}>
     Register
   </Button>
 
   <Modal show={show} onHide={handleClose}>
-    <Modal.Header closeButton>
+    <Modal.Header >
       <Modal.Title>Register</Modal.Title>
     </Modal.Header>
     <Modal.Body>
@@ -92,7 +92,7 @@ function SignupModal({handleShow, show, handleClose, handleLogin}){
           />
         </Form.Group>  
         <Form.Group className="mb-3" controlId="confirm-password">
-          <Form.Label>Confirm Password</Form.Label>
+          <Form.Label> Password</Form.Label>
           <Form.Control
             type="password"
             placeholder="Confirm Password"
@@ -101,7 +101,7 @@ function SignupModal({handleShow, show, handleClose, handleLogin}){
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </Form.Group> 
-         <Button variant="primary" type="submit" >
+         <Button closeButton className = "logSubmit" variant="primary" type="submit" >
         Register
       </Button>
       </Form>

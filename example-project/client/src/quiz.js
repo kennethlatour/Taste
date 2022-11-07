@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route, useHistory } from "react-router-dom";
 import { useState } from "react";
-
+import './quiz.css';
+import Marquee from "react-fast-marquee";
 
 function Quiz({setTypeState}) {
  const [firstState, setFirstState] = useState ("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/El_almuerzo%2C_by_Diego_Vel%C3%A1zquez.jpg/1920px-El_almuerzo%2C_by_Diego_Vel%C3%A1zquez.jpg")
@@ -66,12 +67,42 @@ function changeSecondState () {
         {identifyType("A1")}
         
     }
-
+    const noblur = false
 
     return (
-      <div>
-      <img onClick = {changeFirstState} src= {firstState}/> 
-      <img onClick = {changeSecondState} src= {secondState}/> 
+      <div className="quizContainer">
+     
+      <Marquee gradient = {noblur} direction = "right" >
+       <span className="quizMarquee">Pick ONE pick one pick one pick one pick one </span>
+       </Marquee>
+      <Marquee gradient = {noblur} direction = "left" >  
+      <span className="quizMarquee">Pick ONE pick one pick one pick one pick one </span>
+       </Marquee>
+       <img className="img1" onClick = {changeFirstState} src= {firstState}/> 
+      <img className="img2"onClick = {changeSecondState} src= {secondState}/> 
+      <div className = "inlineDiv">
+      <Marquee gradient = {noblur} direction = "left" >  
+       
+      <span className="sideMarquee">Pick ONE pick one pick one pick one pick one </span>
+       </Marquee>
+       <Marquee gradient = {noblur} direction = "left" >  
+      <span className="sideMarquee2">Pick ONE pick one pick one pick one pick one </span>
+       </Marquee>
+       <Marquee gradient = {noblur} direction = "left" >  
+      <span className="sideMarquee2">Pick ONE pick one pick one pick one pick one </span>
+       </Marquee>
+       <Marquee gradient = {noblur} direction = "left" >  
+      <span className="sideMarquee2">Pick ONE pick one pick one pick one pick one </span>
+       </Marquee>
+       <Marquee gradient = {noblur} direction = "left" >  
+      <span className="sideMarquee2">Pick ONE pick one pick one pick one pick one </span>
+       </Marquee>
+       
+       </div>
+      
+    
+    
+    
      </div>
   )
 }

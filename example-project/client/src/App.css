@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-weight: lighter;
+  font-size: 400%;
 }
 
 .App-logo {
@@ -27,12 +30,70 @@
 .App-link {
   color: #61dafb;
 }
+.button{
+  font-family: 'Libre Barcode 39 Text', cursive;
+    border-width: 0em;
+    border-radius: 0%;
+    font-size: 100%;
+    background-color: rgba(95, 95, 95, 0);
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login {
+  font-weight: thin;
+  /* padding-top: 5vh; */
+  /* padding-left: 2%; */
+  /* padding-bottom: 5vh; */
+  font-family:  'Aboreto', cursive;
+  border-width: 0em;
+  border-radius: 0%;
+  font-size: 115%;
+  z-index: -400;
+  background-color: rgba(95, 95, 95, 0);
+}
+
+.top{
+ position: absolute;
+ height: 80vh;
+ left: 17.5vw;
+ top: 4.5vh;
+ z-index: -1;
+}
+.title{
+  position: absolute;
+ z-index: 2;
+ left: 35vw;
+ top: 36vh;
+ color: white;
+ font-size: 130%;
+}
+.modal-content {
+  padding-top: 25vh;
+  padding-left: 18vw;
+  font-family:  'Aboreto', cursive;
+}
+.logSubmit {
+  font-weight: thin;
+  /* padding-top: 5vh; */
+  /* padding-left: 2%; */
+  /* padding-bottom: 5vh; */
+  font-family:  'Aboreto', cursive;
+  border-width: 0em;
+  border-radius: 0%;
+  font-size: 115%;
+  z-index: -400;
+  background-color: rgba(95, 95, 95, 0);
+  padding-left: 10vw;
+ padding-top: 1vh;
+}
+.form-control {
+  font-family:  'Aboreto', cursive;
+  background-color: whitesmoke;
+  border-width: 0;
+}
+.form-control:enabled {
+  outline-color: #282c34;
+}
+.form-control:active {
+  border-width: 0;
+  outline-color: #282c34;
 }

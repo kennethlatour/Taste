@@ -6,6 +6,7 @@ import Taste from "./taste";
 import Quiz from "./quiz"
 import Result from "./result"
 
+
 function App() {
   const [typeState, setTypeState] = useState ()
   const [resultStyle, setResultStyle] = useState()

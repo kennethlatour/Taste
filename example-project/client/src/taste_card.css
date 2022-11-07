@@ -1,0 +1,128 @@
+.tasteCard {
+    width: 40vw;
+    height: 100vh;
+    background-size:cover;
+    text-align: center;
+    color: white;
+    
+ 
+    /* background-image: var(--style-img) */
+}
+.tasteContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+.stlyeName{
+    padding-top: 50%;
+    padding-left: 15%;
+    font-size: 130%;
+}
+.deletebttn {
+    padding-top: 63%;
+    padding-right: 72%;
+    font-family: 'Libre Barcode 39 Text', cursive;
+    border-width: 0em;
+    border-radius: 0%;
+    font-size: 100%;
+    background-color: rgba(95, 95, 95, 0);
+    color: white
+}
+.logoutButton{
+   
+    font-family: 'Libre Barcode 39 Text', cursive;
+  padding-top: 2%;
+  padding-bottom: 2%;
+    border-width: 0em;
+    border-radius: 0%;
+    font-size: 100%;
+    background-color: rgba(95, 95, 95, 0);
+}
+.quizButton{
+    font-weight: thin;
+    /* padding-top: 5vh; */
+    padding-left: 2%;
+    /* padding-bottom: 5vh; */
+    font-family:  'Aboreto', cursive;
+    border-width: 0em;
+    border-radius: 0%;
+    font-size: 115%;
+    /* background-color: rgba(95, 95, 95, 0);
+        background: -webkit-linear-gradient(rgb(248, 0, 0), rgb(255, 0, 166));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+      
+}
+.quizButtonName {
+   
+    font-weight: thin;
+    /* padding-top: 5vh; */
+    /* padding-left: 2%; */
+    /* padding-bottom: 5vh; */
+    font-family:  'Aboreto', cursive;
+    border-width: 0em;
+    border-radius: 0%;
+    font-size: 115%;
+    z-index: -400;
+    /* background-color: rgba(95, 95, 95, 0);
+        background: -webkit-linear-gradient(rgb(248, 0, 0), rgb(255, 0, 166));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+       */
+}
+.results {
+    font-weight: thin;
+    /* padding-top: 5vh; */
+    /* padding-left: 2%; */
+    /* padding-bottom: 5vh; */
+    font-family:  'Aboreto', cursive;
+    font-size: 120%;
+    z-index: 80;
+    padding-right: 15px;
+   
+    /* background-color: rgba(95, 95, 95, 0);
+        background: -webkit-linear-gradient(rgb(255, 0, 166), rgb(248, 0, 0));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+}
+.outerContainer{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.header {
+    display: flex;
+    /*font-size: 20%;
+    width: 40vw;
+    padding-top: 5%;
+    font-family: 'Anaheim', sans-serif;
+    padding-left: 2%;
+    overflow-wrap: unset;
+    padding-right: 2%;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 5%; */
+    padding-top: .5%;
+    padding-bottom: .5%;
+    font-family: 'Aboreto', cursive;;
+    justify-content: center;
+}
+.trial{
+    position: absolute;
+    left: 10vw;
+    top: 1vh;
+    padding-left: 80vh;
+    height: 200px;
+    z-index: -1;
+}
+.trialText{
+   
+    font: 20px 'Aboreto', cursive;;
+     width: 400px;
+     text-align: center;
+   
+}
