@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    skip_before_action :authorized, only: [:create]
+    skip_before_action :authorized, only: [:create, :show]
     
     def index
         users = User.all
@@ -11,9 +11,17 @@ class UsersController < ApplicationController
         render json: user, status: :created
     end
     
+    # def show
+    #     user = find_user
+    #     render json: user, status: :ok
+    # end
+
     def show
-        user = find_user
-        render json: user, status: :ok
+        
+            render json: current_user, status: :ok
+        # else 
+        #     render json: "no current user", status: :unauthorized
+        # end
     end
     
     def update

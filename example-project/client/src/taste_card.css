@@ -15,47 +15,44 @@
     text-align: center;
     padding-left: 1.5%;
     padding-right: 1.5%;
+    cursor: pointer;
 }
 .stlyeName{
-    padding-top: 50%;
+    padding-top: 60%;
     padding-left: 15%;
     font-size: 130%;
 }
 .deletebttn {
-    padding-top: 63%;
+    padding-top: 50%;
     padding-right: 72%;
     font-family: 'Libre Barcode 39 Text', cursive;
     border-width: 0em;
     border-radius: 0%;
     font-size: 100%;
     background-color: rgba(95, 95, 95, 0);
-    color: white
+    color: white;
+    cursor: pointer;
 }
 .logoutButton{
-   
-    font-family: 'Libre Barcode 39 Text', cursive;
-  padding-top: 2%;
-  padding-bottom: 2%;
+    font-family:  'Aboreto', cursive;
+  margin-top: 2%;
+  margin-bottom: 2%;
     border-width: 0em;
     border-radius: 0%;
     font-size: 100%;
     background-color: rgba(95, 95, 95, 0);
+  
+    cursor: pointer;
 }
-.quizButton{
-    font-weight: thin;
-    /* padding-top: 5vh; */
-    padding-left: 2%;
-    /* padding-bottom: 5vh; */
-    font-family:  'Aboreto', cursive;
-    border-width: 0em;
-    border-radius: 0%;
-    font-size: 115%;
-    /* background-color: rgba(95, 95, 95, 0);
-        background: -webkit-linear-gradient(rgb(248, 0, 0), rgb(255, 0, 166));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; */
-      
+
+.logoutButton:hover{
+
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image: url("https://media.meer.com/attachments/ac5cdecc83ee87890e3df79cca67943909496212/store/fill/930/523/03b9219b95b993eb21a8ea09dd6c299d522c56cd07f7936bc8d24740327f/Rene-Magritte-Courtesy-of-Atomium.jpg");
+    color: white;
 }
+
 .quizButtonName {
    
     font-weight: thin;
@@ -67,11 +64,24 @@
     border-radius: 0%;
     font-size: 115%;
     z-index: -400;
-    /* background-color: rgba(95, 95, 95, 0);
+    cursor: pointer;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-left: 2.348%;
+    padding-right: 2.15%;
+    background-color: rgba(95, 95, 95, 0);
+    background-size: cover;
+    background-position: bottom 950px right 30px ;
+    /* 
         background: -webkit-linear-gradient(rgb(248, 0, 0), rgb(255, 0, 166));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
        */
+}
+.quizButtonName:hover {
+    color: white;
+    background-image: url("https://artincontext.org/wp-content/uploads/2021/10/Famous-Scary-Paintings.jpg");
+    background-color: rgba(95, 95, 95, 0);
 }
 .results {
     font-weight: thin;

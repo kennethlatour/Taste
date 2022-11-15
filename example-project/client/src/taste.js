@@ -6,33 +6,52 @@ import './taste_card.css';
 import Marquee from "react-fast-marquee";
 // import NavigationBar from "./NavigationBar";
 
-function Taste({currentUser}) {
+function Taste({currentUser, setStyleDetails}) {
   const [userTaste, setUserTaste] = useState([])
-    useEffect(() => {
-        fetch("/tastes")
-        .then(res => res.json())
-        .then(data => setUserTaste(data))
-    }, [])
-console.log(userTaste)
+  const [deleteTasteId, setdeleteTasteId] = useState()
 
-function handleDelete(){
-    fetch("/sessions", {
-        method: "DELETE",
+useEffect(()=>{
+    fetch('/authorized_user')
+    .then(res => res.json())
+    .then(user => {
+        setUserTaste(user.tastes)
+        
     })
-    .then((r) => r.json())
-    .then(data => {console.log(data)
-    handleLogout()})
-}
+   
+},[])
 
-function handleLogout() {
+const handleDelete = () => {
+    fetch(`/tastes/${deleteTasteId}`, {
+        method: "DELETE",
+    }).then((res) => {
+        console.log("done")
+    })
+}  
+
+const handleLogout = () => {
+    // DELETE `/logout`
+    fetch('/logout',{
+      method:'DELETE'
+    })
+    .then(res => {
+      if(res.ok){
+        // updateUser(false)
+        homeScreen()
+      }
+    })
+  }
+      
+
+function homeScreen() {
     history.push("/")
 }
 
 
 
 const tastes =  userTaste.map((styleInfo) => {
-    return <TasteCard styleInfo = {styleInfo}/> 
+    return  <TasteCard setdeleteTasteId ={setdeleteTasteId} handleDelete = {handleDelete} styleInfo = {styleInfo} setStyleDetails = {setStyleDetails}/> 
     
+
   })
 
 // <TasteCard style = {style}/> 
@@ -60,32 +79,13 @@ const noblur = false
 take the quiz below and based off a series of images you will be matched to your favorite artforms and a breif history about them. Save them to your catlog to refrence back to in high society conversations 
 </p>
 <img  className="trial" src = "https://collectionapi.metmuseum.org/api/collection/v1/iiif/485934/1005920/restricted"/>
-
-
-        {/* <Marquee gradient = {noblur} > */}
-      {/* <span >Discover the artworld virtually. Here is how to define your taste. </span>
-      <img src = "https://collectionapi.metmuseum.org/api/collection/v1/iiif/485934/1005920/restricted"/>
-        <span>take the quiz below and based off a series of images you will be matched to your favorite artforms and a breif history about them. Save them to your catlog to refrence back to in high society conversations </span>
-      </Marquee> */}
         </div>
-        <Marquee gradient = {noblur} direction = "left">
-        <button className= "quizButtonName" onClick= {handleClick}>  QUIZ</button>
-        <button className= "quizButton" onClick= {handleClick}> QUIZ </button>
-       <button className= "quizButton" onClick= {handleClick}> QUIZ </button>
-       <button className= "quizButton" onClick= {handleClick}> QUIZ </button>
-       <button className= "quizButton" onClick= {handleClick}> QUIZ </button>
-       <button className= "quizButton" onClick= {handleClick}> QUIZ </button>
-       <button className= "quizButton" onClick= {handleClick}> QUIZ </button>
-       <button className= "quizButton" onClick= {handleClick}> QUIZ </button>
-       <button className= "quizButton" onClick= {handleClick}> QUIZ </button>
-       
-  
-       
+        <Marquee  gradient = {noblur} direction = "left">
+        <button className= "quizButtonName" onClick= {handleClick}> take QUIZ &nbsp;  &nbsp; take QUIZ &nbsp;&nbsp;  take QUIZ  &nbsp;&nbsp; take QUIZ</button>
        </Marquee>
        <Marquee gradient = {noblur} direction = "right" >
        <div className= "results">
        CATALOG CATALOG CATALOG CATALOG CATALOG CATALOG CATALOG 
-        
        </div>
        </Marquee>
        <Marquee gradient = {noblur} direction = "right">
@@ -93,7 +93,7 @@ take the quiz below and based off a series of images you will be matched to your
         {tastes}
         </div>
         </Marquee>
-        <button className= "logoutButton" onClick ={handleDelete}> logout </button>
+        <button className= "logoutButton" onClick ={handleLogout}> logout </button>
 
      </div>
   )

@@ -37,4 +37,5 @@
     font-size: 100%;
     background-color: rgba(95, 95, 95, 0);
     color: rgb(0, 13, 255);
+    cursor: pointer;
 }

@@ -4,7 +4,7 @@ import './result.css';
 import Marquee from "react-fast-marquee";
 
 function Result({resultStyle, currentUser}) {
- 
+ console.log(currentUser)
 const history = useHistory()
  const [userId, setUserId] = useState()
           useEffect(() => {
@@ -14,6 +14,7 @@ const history = useHistory()
           }, [])
  
  function saveStyle () {
+  
     const obj = userId[0]
     const id = obj.user_id
     const newTaste = {style_id: resultStyle.id , user_id: id}

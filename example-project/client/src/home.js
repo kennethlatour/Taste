@@ -32,6 +32,7 @@ function Home( { handleLogin , setCurrentUser} ){
             handleClose={handleClose}
             handleShow={handleShow}
             handleLogin={handleLogin}
+           
             />
             </div>
             

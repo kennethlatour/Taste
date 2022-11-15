@@ -30,7 +30,7 @@ function SignupModal({handleShow, show, handleClose, handleLogin}){
       body: JSON.stringify(userData),
     })
     .then((r) => r.json())
-    .then((data) => {console.log(data)
+    .then((data) => {console.log(data); defaultStyle(data)
     })
     setTimeout(()=> fetch("/login", {
       method: "POST",
@@ -45,7 +45,24 @@ function SignupModal({handleShow, show, handleClose, handleLogin}){
     }), 2000)
   }
     
+  function defaultStyle (data) {
+   
+    const useId = data.id
+    const newTaste = {style_id: 16, user_id: useId}
+    console.log(newTaste)
 
+    fetch("/tastes", {
+      method: "POST",
+      headers: {
+      "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newTaste)
+  })
+  .then((res) => res.json())
+  .then((res) => {
+      console.log(newTaste);
+})
+  }
   
     
     return(

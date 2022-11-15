@@ -97,3 +97,7 @@
   border-width: 0;
   outline-color: #282c34;
 }
+
+.btn.btn-primary{
+  cursor: pointer;
+}

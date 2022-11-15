@@ -13,6 +13,7 @@
     left: 10vw; 
     top:7vh;
     z-index: 2;
+    cursor: pointer;
 
 }
 .img2 {
@@ -23,6 +24,7 @@
     position: absolute;
     z-index: 2;
     top:7vh;
+    cursor: pointer;
 }
 
 .quizMarquee{
