@@ -4,7 +4,7 @@
     background-size:cover;
     text-align: center;
     color: white;
-    
+   
  
     /* background-image: var(--style-img) */
 }
@@ -15,12 +15,13 @@
     text-align: center;
     padding-left: 1.5%;
     padding-right: 1.5%;
-    cursor: pointer;
+   
 }
 .stlyeName{
     padding-top: 60%;
     padding-left: 15%;
     font-size: 130%;
+    cursor: pointer;
 }
 .deletebttn {
     padding-top: 50%;

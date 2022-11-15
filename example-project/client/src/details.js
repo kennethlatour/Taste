@@ -13,11 +13,11 @@ function Details({styleDetails}){
     
 return (
     <div>
-          <Marquee gradient = {noblur} direction = "right"> 
-     <button onClick = {back} className= "saveButton" >back back back back back back back back back back back back</button>
-     </Marquee>
+        <Marquee gradient = {noblur} direction = "right"> 
+                <button onClick = {back} className= "saveButton" >back back back back back back back back back back back back</button>
+        </Marquee>
      <div className="styleName"> {styleDetails.style}</div>
-     <img  className="styleImg" src = {styleDetails.img} />
+     <img  className="styleImg" src = {styleDetails.img} alt = {styleDetails.style} />
      <div className="styleDescript"> {styleDetails.descript}</div>
  
    </div>

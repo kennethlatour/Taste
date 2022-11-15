@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
@@ -69,7 +69,7 @@ function SignupModal({handleShow, show, handleClose, handleLogin}){
     <> 
     <Button  className = "login" variant="primary" onClick={handleShow}>
     Register
-  </Button>
+    </Button>
 
   <Modal show={show} onHide={handleClose}>
     <Modal.Header >

@@ -30,14 +30,11 @@ function TasteCard({styleInfo, setStyleDetails, handleDelete, setdeleteTasteId})
       setStyleDetails(actualStyle)
       history.push('./details')
     }
+
     return (
       <div  style={divStyle} className="tasteCard">
-       
-     <div onClick = {details} className="stlyeName">{actualStyle.style}</div>
-     <button className = "deletebttn" onClick = {handleDelete}> delete </button>
-     
-     {/* <img src= {actualStyle.img}/> */}
-    
+        <div onClick = {details} className="stlyeName">{actualStyle.style}</div>
+        <button className = "deletebttn" onClick = {handleDelete}> delete </button>
      </div>
   )
 }
