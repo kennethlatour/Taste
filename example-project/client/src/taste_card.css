@@ -6,7 +6,7 @@
     color: white;
    
  
-    /* background-image: var(--style-img) */
+    
 }
 .tasteContainer {
     display: flex;
@@ -57,9 +57,6 @@
 .quizButtonName {
    
     font-weight: thin;
-    /* padding-top: 5vh; */
-    /* padding-left: 2%; */
-    /* padding-bottom: 5vh; */
     font-family:  'Aboreto', cursive;
     border-width: 0em;
     border-radius: 0%;
@@ -86,9 +83,6 @@
 }
 .results {
     font-weight: thin;
-    /* padding-top: 5vh; */
-    /* padding-left: 2%; */
-    /* padding-bottom: 5vh; */
     font-family:  'Aboreto', cursive;
     font-size: 120%;
     z-index: 80;

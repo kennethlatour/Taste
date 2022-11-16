@@ -4,11 +4,10 @@ import TasteCard from './taste_card'
 import { useHistory } from "react-router-dom";
 import './taste_card.css';
 import Marquee from "react-fast-marquee";
-// import NavigationBar from "./NavigationBar";
 
 function Taste({setStyleDetails}) {
   const [userTaste, setUserTaste] = useState([])
-  const [deleteTasteId, setdeleteTasteId] = useState()
+
   const noblur = false
   const history = useHistory()
 
@@ -22,16 +21,7 @@ function Taste({setStyleDetails}) {
     
     },[])
 
-    const handleDelete = () => {
-        fetch(`/tastes/${deleteTasteId}`, {
-            method: "DELETE",
-        }).then((res) => {
-            console.log("done")
-        })
-    }  
-
-    const handleLogout = () => {
-        
+    const handleLogout = () => { 
         fetch('/logout',{
         method:'DELETE'
         })
@@ -48,7 +38,7 @@ function Taste({setStyleDetails}) {
     }
 
     const tastes =  userTaste.map((styleInfo) => {
-        return  <TasteCard key = {styleInfo.id} setdeleteTasteId ={setdeleteTasteId} handleDelete = {handleDelete} styleInfo = {styleInfo} setStyleDetails = {setStyleDetails}/> 
+        return  <TasteCard setUserTaste = {setUserTaste} key = {styleInfo.id}  styleInfo = {styleInfo} setStyleDetails = {setStyleDetails}/> 
     })
 
     

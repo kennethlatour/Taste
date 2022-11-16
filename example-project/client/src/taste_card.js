@@ -2,11 +2,10 @@ import {React, useEffect, useState } from "react";
 import { useHistory } from 'react-router-dom';
 import './taste_card.css';
 
-function TasteCard({styleInfo, setStyleDetails, handleDelete, setdeleteTasteId}) {
+function TasteCard({styleInfo, setStyleDetails, setUserTaste}) {
   const history = useHistory()
   const [actualStyle, setActualStyle] = useState("")
-  const deleteId = styleInfo.id
-  setdeleteTasteId(deleteId)
+  
     var divStyle = {
         backgroundImage: 'url(' + actualStyle.img + ')',
        
@@ -19,13 +18,23 @@ function TasteCard({styleInfo, setStyleDetails, handleDelete, setdeleteTasteId})
       
     })}, [])
 
-    // const handleDelete = () => {
-    //     fetch(`/tastes/${styleInfo.id}`, {
-    //         method: "DELETE",
-    //     }).then((res) => {
-    //         console.log("done")
-    //     })
-    // }  
+    const handleDelete = () => {
+        fetch(`/tastes/${styleInfo.id}`, {
+            method: "DELETE",
+        }).then((res) => {
+            console.log("done")
+            catalogUpdate()
+        })
+    }  
+
+    function catalogUpdate (){
+    fetch('/authorized_user')
+        .then(res => res.json())
+        .then(user => {
+            setUserTaste(user.tastes)
+            
+        })}
+
     function details (){
       setStyleDetails(actualStyle)
       history.push('./details')

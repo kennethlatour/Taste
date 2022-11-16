@@ -67,7 +67,10 @@ function LoginModal({handleShow, show, handleClose, handleLogin, setCurrentUser}
                   autoFocus
                 />
               </Form.Group>
-              <Button className = "logSubmit" variant="primary" type='submit' onClick={handleClose}>
+              <Button className = "closeLog"  onClick={handleClose}>
+              CLose
+            </Button>
+              <Button className = "logSubmit" variant="primary" type='submit' >
               Login
             </Button>
             </Form>

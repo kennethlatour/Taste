@@ -29,9 +29,6 @@
 
 .quizMarquee{
     font-weight: thin;
-    /* padding-top: 5vh; */
-    /* padding-left: 2%; */
-    /* padding-bottom: 5vh; */
     font-family:  'Aboreto', cursive;
     font-size: 118%;
     z-index: -1;
@@ -43,9 +40,6 @@
 }
 .sideMarquee {
     font-weight: thin;
-    /* padding-top: 5vh; */
-    /* padding-left: 2%; */
-    /* padding-bottom: 5vh; */
     font-family:  'Aboreto', cursive;
     font-size: 118%;
     z-index: -1;
@@ -56,15 +50,9 @@
 }
 .sideMarquee2 {
     font-weight: thin;
-    /* padding-top: 5vh; */
-    /* padding-left: 2%; */
-    /* padding-bottom: 5vh; */
     font-family:  'Aboreto', cursive;
     font-size: 118%;
     z-index: -1;
     display: flex;
     width: 10px;
-    
- 
-
 }

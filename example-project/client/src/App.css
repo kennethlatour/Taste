@@ -73,6 +73,18 @@
 }
 .logSubmit {
   font-weight: thin;
+  margin-left: 8vw;
+  font-family:  'Aboreto', cursive;
+  border-width: 0em;
+  border-radius: 0%;
+  font-size: 115%;
+  z-index: -400;
+  background-color: rgba(95, 95, 95, 0);
+  padding-left: 0vw;
+ padding-top: 1vh;
+}
+.closeLog{
+  font-weight: thin;
   /* padding-top: 5vh; */
   /* padding-left: 2%; */
   /* padding-bottom: 5vh; */
@@ -82,8 +94,8 @@
   font-size: 115%;
   z-index: -400;
   background-color: rgba(95, 95, 95, 0);
-  padding-left: 10vw;
- padding-top: 1vh;
+  padding-left: 0vw;
+ padding-top: 1vh; 
 }
 .form-control {
   font-family:  'Aboreto', cursive;

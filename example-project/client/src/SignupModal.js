@@ -71,7 +71,7 @@ function SignupModal({handleShow, show, handleClose, handleLogin}){
     Register
     </Button>
 
-  <Modal show={show} onHide={handleClose}>
+  <Modal show = {show}>
     <Modal.Header >
       <Modal.Title>Register</Modal.Title>
     </Modal.Header>
@@ -118,9 +118,13 @@ function SignupModal({handleShow, show, handleClose, handleLogin}){
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </Form.Group> 
+        <Button onClick = {handleClose} closeButton className = "closeLog"   >
+        CLose
+      </Button>
          <Button closeButton className = "logSubmit" variant="primary" type="submit" >
         Register
       </Button>
+   
       </Form>
       
     </Modal.Body>
